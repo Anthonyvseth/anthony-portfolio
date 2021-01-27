@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { 
     MobileIcon,
     Nav,
@@ -8,33 +8,53 @@ import {
     NavMenu,
     NavItem
      } from './NavbarElems'
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaRegUser, FaChalkboard, FaAddressBook, FaCode } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 
 
-const NavBar = () => {
+const NavBar = ({toggle}) => {
+        const [scrollNav, setScrollNav] = useState(false);
+      
+        const changeNav = () => {
+          if (window.scrollY >= 80) {
+            setScrollNav(true);
+          } else {
+            setScrollNav(false);
+          }
+        };
+      
+        useEffect(() => {
+          window.addEventListener('scroll', changeNav);
+        }, []);
+      
+        const toggleHome = () => {
+          scroll.scrollToTop();
+        };
+      
+
     return (
         <>
             <div>
-                <Nav>
+                <Nav scrollNav={scrollNav} >
                     <NavBarContainer>
-                        <NavLogo to='/'>
+                        <NavLogo onClick={toggleHome} to='/'>
                             AVS
                         </NavLogo>
-                        <MobileIcon>
+                        <MobileIcon onClick={toggle}>
                             <FaBars />
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to='about'>About</NavLinks>
+                                <NavLinks to='about'> <FaRegUser /> About</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='portfolio'>Portfolio</NavLinks>
+                                <NavLinks to='portfolio'> <FaChalkboard /> Portfolio</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='skills'>Skills</NavLinks>
+                                <NavLinks to='skills'> <FaCode /> Skills</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='contact'>Contact</NavLinks>
+                                <NavLinks to='contact'> <FaAddressBook /> Contact</NavLinks>
                             </NavItem>
                         </NavMenu>
                     </NavBarContainer>

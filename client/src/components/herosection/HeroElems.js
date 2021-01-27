@@ -80,7 +80,6 @@ export const HeroH1 = styled.h1`
     to{width: 300px;}
   }
               
-
   @keyframes animated-cursor{
     from{border-right-color: rgba(255, 255, 255,.75);}
     to{border-right-color: transparent;}
@@ -93,6 +92,11 @@ export const HeroH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+
+  &:hover {
+        color: #fff59d;
+        transition: 0.2s ease-in-out;
+      }
 `;
 
 export const HeroP = styled.p`
@@ -109,6 +113,11 @@ export const HeroP = styled.p`
   @media screen and (max-width: 480px) {
     font-size: 18px;
   }
+
+  &:hover {
+        color: #fff59d;
+        transition: 0.2s ease-in-out;
+      }
 `;
 export const HeroBtnWrapper = styled.div`
   margin-top: 32px;

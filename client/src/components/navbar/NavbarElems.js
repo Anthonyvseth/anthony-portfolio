@@ -26,7 +26,7 @@ export const NavBarContainer = styled.div`
     height: 80px;
     z-index: 1;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 200px;
     max-width: 1100px;
 `;
 
@@ -67,7 +67,6 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
 
     @media screen and (max-width: 768px) {
         display:none;
@@ -91,9 +90,10 @@ export const NavLinks = styled(LinkS)`
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 2rem;
     height: 100%;
-    cursor pointer;
+    cursor: pointer;
+    justify-self: flex-end;
 
     &:hover {
         color: #fff59d;
@@ -108,7 +108,7 @@ export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
     background: #fff59d;
     white-space: nowrap;
-    padding: 10px 22px;
+    padding: 10px 10px;
     color: #fffde;
     font-size: 16px:
     outline: none;
