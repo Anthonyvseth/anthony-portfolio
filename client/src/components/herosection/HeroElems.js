@@ -67,8 +67,24 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #fff;
+  border-right: solid 3px rgba(255 ,255 ,255 ,.75);
+  white-space: nowrap;
+  overflow: hidden; 
   font-size: 48px;
   text-align: center;
+  animation: animated-text 2s steps(12,end) 1s 1 normal both,
+             animated-cursor 600ms steps(12,end) infinite;
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 300px;}
+  }
+              
+
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(255, 255, 255,.75);}
+    to{border-right-color: transparent;}
+  };
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
