@@ -10,8 +10,7 @@ import {
      } from './NavbarElems'
 import { FaBars, FaRegUser, FaChalkboard, FaAddressBook, FaCode } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
-import { IconContext } from 'react-icons/lib'
-import { Icon } from '../sidebar/SideBarElems';
+import { IconContext } from 'react-icons/lib';
 
 
 const NavBar = ({toggle}) => {
@@ -46,16 +45,52 @@ const NavBar = ({toggle}) => {
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to='about'> <FaRegUser /> About</NavLinks>
+                                <NavLinks
+                                    to='about'
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact='true'
+                                    offset={-80}
+                                > 
+                                    <FaRegUser /> About
+                                </NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='portfolio'> <FaChalkboard /> Portfolio</NavLinks>
+                                <NavLinks 
+                                    to='portfolio'
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact='true'
+                                    offset={-80}
+                                > 
+                                    <FaChalkboard /> Portfolio
+                                </NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='skills'> <FaCode /> Skills</NavLinks>
+                                <NavLinks 
+                                    to='skills'
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact='true'
+                                    offset={-80}
+                                > 
+                                    <FaCode /> Skills
+                                </NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='contact'> <FaAddressBook /> Contact</NavLinks>
+                                <NavLinks
+                                    to='contact'
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact='true'
+                                    offset={-80}
+                                 > 
+                                    <FaAddressBook /> Contact
+                                 </NavLinks>
                             </NavItem>
                         </NavMenu>
                     </NavBarContainer>

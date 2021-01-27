@@ -7,15 +7,16 @@ export const Nav = styled.nav`
     height: 80px;
     margin-top: -80px;
     display: flex;
-    justifly-content: center;
+    justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: sticky;
     top: 0;
     z-index: 10;
-
-    @media screen and (max-width: 960) {
-        transition: 0.8s all ease;
+    transition: 0.8s all ease;
+  
+    @media screen and (max-width: 960px) {
+      transition: 0.8s all ease;
     }
 `;
 
@@ -68,11 +69,12 @@ export const NavMenu = styled.ul`
     margin-right: -22px;
 
     @media screen and (max-width: 768px) {
-        display:none;
+        display: none;
     }
 `;
 export const NavItem = styled.li`
     height: 80px;
+    width: 140px;
 `;
 
 export const NavBtn = styled.nav`
