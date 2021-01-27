@@ -10,6 +10,8 @@ import {
      } from './NavbarElems'
 import { FaBars, FaRegUser, FaChalkboard, FaAddressBook, FaCode } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
+import { IconContext } from 'react-icons/lib'
+import { Icon } from '../sidebar/SideBarElems';
 
 
 const NavBar = ({toggle}) => {
@@ -33,8 +35,7 @@ const NavBar = ({toggle}) => {
       
 
     return (
-        <>
-            <div>
+            <IconContext.Provider value={{ color: '#fff' }} >
                 <Nav scrollNav={scrollNav} >
                     <NavBarContainer>
                         <NavLogo onClick={toggleHome} to='/'>
@@ -59,8 +60,7 @@ const NavBar = ({toggle}) => {
                         </NavMenu>
                     </NavBarContainer>
                 </Nav>
-            </div>
-        </>
+            </IconContext.Provider>
     )
 }
 
