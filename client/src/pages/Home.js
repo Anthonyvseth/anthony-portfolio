@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
+import HeroSection from '../components/herosection';
 import NavBar from '../components/navbar/index'
 import Sidebar from '../components/sidebar'
 const Home = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
+
     return (
         <div>
-            <NavBar />
-            <Sidebar />
-            <h1>Anthony Seth</h1>
+            <NavBar toggle={toggle}  />
+            <Sidebar isOpen={isOpen} toggle={toggle}  />
+            <HeroSection />
         </div>
     )
 }
