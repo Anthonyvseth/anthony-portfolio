@@ -8,6 +8,8 @@ import {
     NavMenu,
     NavItem
      } from './NavbarElems'
+import { FaBars } from 'react-icons/fa';
+
 
 const NavBar = () => {
     return (
@@ -19,7 +21,7 @@ const NavBar = () => {
                             AVS
                         </NavLogo>
                         <MobileIcon>
-                            AVS
+                            <FaBars />
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
