@@ -1,10 +1,14 @@
 import React from 'react'
-
-const SkillSection = () => {
+import {
+    SkillContainer, SkillH1, SkillWrapper
+} from './SkillsElems'
+const SkillSection = ({ id }) => {
     return (
-        <div>
-            <h1>Skills Section</h1>
-        </div>
+        <SkillContainer id={id}>
+            <SkillWrapper>
+                <SkillH1>Skills</SkillH1>
+            </SkillWrapper>
+        </SkillContainer>
     )
 }
 

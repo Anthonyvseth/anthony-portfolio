@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Video from '../../videos/video.mp4'
+import { ContBg, ContContainer, VideoBg } from './ContactElems'
 
-const Contact = () => {
+const Contact = ({ id }) => {
     return (
-        <div>
-            <h1>Contact</h1>
-        </div>
+        <ContContainer id={id}>
+            <ContBg>
+            <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
+            </ContBg>
+        </ContContainer>
     )
 }
 

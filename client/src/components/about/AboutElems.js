@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
   color: #fff;
-  background: #030029;
-
+  background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
+  clip-path: polygon(100% 0, 100% 50%, 100% 91%, 0 100%, 0 49%, 0 0);
+  
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }

@@ -1,7 +1,9 @@
 export const aboutObjOne = {
     id: 'about',
-    headline: 'Unlimited Transactions with zero fees',
-    description:'Get access to our exclusive app that allows you to send unlimited transactions without getting charged any fees',
-    buttonLabel: 'Get Started',
+    headline: 'Anthony Seth',
+    description:'Ducimus sit et totam. Corporis quos doloremque optio enim ab. Autem qui quae. A saepe quo doloribus maiores quam nihil. Dolores non repellendus fugiat sit rerum aspernatur rem. Atque fuga vel nam dolorum quo modi repellendus consequuntur eos.',
+    buttonLabel: '',
     imgStart: false,
+    img: require('../../images/profile.svg'),
+    alt: 'Profile Picture',
 }

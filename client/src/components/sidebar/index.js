@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             About
           </SidebarLink>
           <SidebarLink
-            to='discover'
+            to='portfolio'
             onClick={toggle}
             smooth={true}
             duration={500}
@@ -41,7 +41,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             Portfolio
           </SidebarLink>
           <SidebarLink
-            to='services'
+            to='skills'
             onClick={toggle}
             smooth={true}
             duration={500}
@@ -52,7 +52,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             Skills
           </SidebarLink>
           <SidebarLink
-            to='signup'
+            to='contact'
             onClick={toggle}
             smooth={true}
             duration={500}
