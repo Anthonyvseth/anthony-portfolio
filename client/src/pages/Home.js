@@ -11,6 +11,7 @@ import {aboutObjOne} from '../components/about/Data'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
 
     const toggle = () => {
       setIsOpen(!isOpen);
@@ -18,10 +19,10 @@ const Home = () => {
 
     return (
         <div>
-            <Sidebar isOpen={isOpen} toggle={toggle}  />
-            <NavBar toggle={toggle}  />
-            <HeroSection />
-            <About {...aboutObjOne} />
+            <Sidebar isOpen={isOpen} toggle={toggle} darkMode={darkMode} />
+            <NavBar toggle={toggle} darkMode={darkMode}  />
+            <HeroSection darkMode={darkMode} />
+            <About {...aboutObjOne} darkMode={darkMode} />
             <Portfolio />
             <SkillSection />
             <Contact />
