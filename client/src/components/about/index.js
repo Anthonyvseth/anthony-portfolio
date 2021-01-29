@@ -15,7 +15,8 @@ const About = ({
     id,
     headline,
     description,
-    img
+    img,
+    alt
 }) => {
     return (
         <AboutContainer id={id}>
@@ -28,7 +29,7 @@ const About = ({
                 </Column1>
                 <Column2>
                     <ImgWrap>
-                        <Img src={img} />
+                        <Img src={img} alt={alt} />
                     </ImgWrap>
                 </Column2>
             </AboutWrapper>

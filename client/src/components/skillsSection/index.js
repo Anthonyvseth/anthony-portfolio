@@ -2,9 +2,9 @@ import React from 'react'
 import {
     SkillContainer, SkillH1, SkillWrapper
 } from './SkillsElems'
-const SkillSection = () => {
+const SkillSection = ({ id }) => {
     return (
-        <SkillContainer>
+        <SkillContainer id={id}>
             <SkillWrapper>
                 <SkillH1>Skills</SkillH1>
             </SkillWrapper>

@@ -8,6 +8,9 @@ import Portfolio from '../components/portfolioSection';
 import Sidebar from '../components/sidebar'
 import SkillSection from '../components/skillsSection';
 import {aboutObjOne} from '../components/about/Data'
+import { portObjOne } from '../components/portfolioSection/Data';
+import { skillObjOne } from '../components/skillsSection/Data';
+import { contObjOne } from '../components/contactSection/Data';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +25,9 @@ const Home = () => {
             <NavBar toggle={toggle}  />
             <HeroSection />
             <About {...aboutObjOne} />
-            <Portfolio />
-            <SkillSection />
-            <Contact />
+            <Portfolio {...portObjOne} />
+            <SkillSection {...skillObjOne} />
+            <Contact {...contObjOne} />
         </div>
     )
 }
