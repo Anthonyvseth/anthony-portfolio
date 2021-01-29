@@ -6,7 +6,10 @@ import {
     NavLinks,
     NavLogo,
     NavMenu,
-    NavItem
+    NavItem,
+    NavBtn,
+    NavBtnLink,
+    NavSpan
      } from './NavbarElems'
 import { FaBars, FaRegUser, FaChalkboard, FaAddressBook, FaCode } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
@@ -14,23 +17,23 @@ import { IconContext } from 'react-icons/lib';
 
 
 const NavBar = ({toggle}) => {
-        const [scrollNav, setScrollNav] = useState(false);
+    const [scrollNav, setScrollNav] = useState(false);
+    
+    const changeNav = () => {
+      if (window.scrollY >= 80) {
+        setScrollNav(true);
+      } else {
+        setScrollNav(false);
+      }
+    };
       
-        const changeNav = () => {
-          if (window.scrollY >= 80) {
-            setScrollNav(true);
-          } else {
-            setScrollNav(false);
-          }
-        };
+    useEffect(() => {
+      window.addEventListener('scroll', changeNav);
+    }, []);
       
-        useEffect(() => {
-          window.addEventListener('scroll', changeNav);
-        }, []);
-      
-        const toggleHome = () => {
-          scroll.scrollToTop();
-        };
+    const toggleHome = () => {
+      scroll.scrollToTop();
+    };
       
 
     return (

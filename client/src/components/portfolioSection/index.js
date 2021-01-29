@@ -1,10 +1,11 @@
 import React from 'react'
+import { PortContainer, PortH1 } from './PortfolioElems'
 
 const Portfolio = () => {
     return (
-        <div>
-            <h1>Portfolio</h1>
-        </div>
+        <PortContainer>
+            <PortH1>Portfolio</PortH1>
+        </PortContainer>
     )
 }
 

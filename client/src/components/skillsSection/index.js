@@ -1,10 +1,14 @@
 import React from 'react'
-
+import {
+    SkillContainer, SkillH1, SkillWrapper
+} from './SkillsElems'
 const SkillSection = () => {
     return (
-        <div>
-            <h1>Skills Section</h1>
-        </div>
+        <SkillContainer>
+            <SkillWrapper>
+                <SkillH1>Skills</SkillH1>
+            </SkillWrapper>
+        </SkillContainer>
     )
 }
 
