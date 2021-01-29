@@ -9,6 +9,8 @@ import {
   SidebarRoute,
   SideBtnWrap
 } from './SideBarElems';
+import { FaBars, FaRegUser, FaChalkboard, FaAddressBook, FaCode } from 'react-icons/fa';
+
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -27,7 +29,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            About
+            <FaRegUser /> About
           </SidebarLink>
           <SidebarLink
             to='portfolio'
@@ -38,7 +40,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Portfolio
+            <FaChalkboard /> Portfolio
           </SidebarLink>
           <SidebarLink
             to='skills'
@@ -49,7 +51,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Skills
+            <FaCode /> Skills
           </SidebarLink>
           <SidebarLink
             to='contact'
@@ -60,7 +62,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Contact
+            <FaAddressBook /> Contact
           </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>

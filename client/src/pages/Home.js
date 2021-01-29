@@ -21,7 +21,7 @@ const Home = () => {
     };
 
     return (
-        <div>s
+        <div>
             <Sidebar isOpen={isOpen} toggle={toggle}  />
             <NavBar toggle={toggle}  />
             <HeroSection />
