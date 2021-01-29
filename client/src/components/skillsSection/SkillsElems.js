@@ -5,7 +5,7 @@ export const SkillContainer = styled.div`
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 49%, 0 8%);
-
+  margin-top: 20px;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
