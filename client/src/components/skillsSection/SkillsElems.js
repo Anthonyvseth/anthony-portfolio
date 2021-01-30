@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 
 export const SkillContainer = styled.div`
+  margin-top: 20px;
+  height: 100vh;
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 49%, 0 8%);
@@ -11,7 +13,8 @@ export const SkillContainer = styled.div`
   align-items: center;
   
   @media screen and (max-width: 768px) {
-    padding: 100vw 0;
+    height: 100vh;
+    padding: 10vw 0;
   }
 `;
 

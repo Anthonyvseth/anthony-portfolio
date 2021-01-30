@@ -17,24 +17,17 @@ import Video from '../../videos/video1.mp4'
 const Contact = ({ id }) => {
     return (
         <ContContainer id={id}>
-          <ContBg>
-              <VideoBg playsInline autoPlay loop muted src={Video} type='video1/mp4' />
-          </ContBg>
-          <ContContent>
-            <FormWrap >
-              <FormContent>
-                <Form>
+          <FormWrap>
+            <ContBg>
+                <VideoBg playsInline autoPlay loop muted src={Video} type='video1/mp4' />
+            </ContBg>
+            <ContContent>
+              <Form>
                 <ContH1>Contact Me</ContH1>
-                  <FormLabel>Email</FormLabel>
-                  <FormInput>
-
-                  </FormInput>
-                </Form>
-              </FormContent>
-              
-            </FormWrap>
-            <ToastContainer />
-          </ContContent>
+              </Form>
+              <ToastContainer />
+            </ContContent>
+          </FormWrap>
       </ContContainer>
     )
 }

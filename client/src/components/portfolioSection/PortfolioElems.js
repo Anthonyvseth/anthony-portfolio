@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PortContainer = styled.div`
-  height: 1000px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,7 @@ export const PortContainer = styled.div`
   clip-path: polygon()
 
   @media screen and (max-width: 768px) {
-    height: 1100px;
+    height: 100vh;
     padding: 100px 0;
   }
 
