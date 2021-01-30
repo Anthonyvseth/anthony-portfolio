@@ -5,22 +5,33 @@ export const SkillContainer = styled.div`
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 49%, 0 8%);
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    padding: 100vw 0;
   }
 `;
 
 export const SkillWrapper = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
-  z-index: 1;
-  height: 860px;
-  width: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 24px;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 `;
 
 export const SkillH1 = styled.h1`

@@ -4,9 +4,13 @@ export const AboutContainer = styled.div`
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 91%, 0 100%, 0 49%, 0 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    padding: 100vw 0;
   }
 `;
 
@@ -18,7 +22,7 @@ export const AboutWrapper = styled.div`
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  padding: 0;
   justify-content: center;
 `;
 
