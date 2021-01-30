@@ -10,7 +10,7 @@ export const AboutContainer = styled.div`
   align-items: center;
   
   @media screen and (max-width: 768px) {
-    padding: 100vw 0;
+    padding: 10vw 0;
   }
 `;
 
