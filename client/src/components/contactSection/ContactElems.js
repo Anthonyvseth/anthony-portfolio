@@ -179,5 +179,7 @@ export const FormButton = styled.button`
 `;
 
 export const SpanErr= styled.span`
-  color: red;
+  color: #ff0000;
+  font-weight: bold;
+  text-shadow: 0 0 10px #FF0000;
 `

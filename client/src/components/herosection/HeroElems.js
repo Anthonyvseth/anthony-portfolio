@@ -73,6 +73,8 @@ export const HeroH1 = styled.h1`
   overflow: hidden; 
   font-size: 48px;
   text-align: center;
+  text-shadow: 0 0 10px #fff59d;
+  
   animation: animated-text 2s steps(12,end) 1s 1 normal both,
              animated-cursor 600ms steps(12,end) infinite;
 
