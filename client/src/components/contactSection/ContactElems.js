@@ -111,7 +111,7 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
 
 export const FormLabel = styled.label`
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 20px;
   color: #fff;
   text-align: left;
 `;

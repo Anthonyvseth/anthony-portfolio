@@ -67,6 +67,9 @@ export const PortIcon = styled.img`
 export const PortH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content; flex-start;
   margin-bottom: 64px;
 
   @media screen and (max-width: 480px) {
