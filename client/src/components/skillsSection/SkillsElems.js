@@ -6,12 +6,18 @@ export const SkillContainer = styled.div`
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 49%, 0 8%);
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
   @media screen and (max-width: 768px) {
-    padding: 100vw 0;
+    height: 100vh;
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 100vh;
   }
 `;
 

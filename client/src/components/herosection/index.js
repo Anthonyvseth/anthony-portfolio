@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import { Button } from '../ButtonElems';
-
+import {FaGithub, FaLinkedin, FaInstagram} from 'react-icons/fa'
 import Video from '../../videos/video1.mp4';
 import {
   HeroContainer,
@@ -11,8 +12,21 @@ import {
   HeroP,
   HeroBtnWrapper,
   ArrowForward,
-  ArrowRight
+  ArrowRight,
+  LinkContainer
 } from './HeroElems';
+
+function openGithub() {
+  window.open('https://github.com/Anthonyvseth')
+}
+
+function openLinkedin() {
+  window.open('https://www.linkedin.com/in/anthonyseth/')
+}
+
+function openInsta() {
+  window.open('https://www.instagram.com/anthonyvseth/')
+}
 
 function HeroSection() {
   const [hover, setHover] = useState(false);
@@ -20,6 +34,8 @@ function HeroSection() {
   const onHover = () => {
     setHover(!hover);
   };
+
+  
   return (
     <HeroContainer id='home'>
       <HeroBg>
@@ -27,9 +43,17 @@ function HeroSection() {
       </HeroBg>
       <HeroContent>
         <HeroH1>Anthony Seth</HeroH1>
-        <HeroP>
-        I am a software engineer driven to create a better a future. My goal is to simplify solutions to life's complex problems and use my continual learning to keep improving the quality and ease of life through software. As we grow, we are always building new skills and abilities. Efficiency and organization are my key skills and having an organized mind, in turn makes it easy to find where there can be any issues in code and in life. 
+        <LinkContainer>
+          <HeroP>
+            <FaGithub onClick={openGithub}/>
+          </HeroP>
+          <HeroP>
+            <FaLinkedin onClick={openLinkedin}/>
+          </HeroP>
+          <HeroP>
+          <FaInstagram onClick={openInsta}/>
         </HeroP>
+        </LinkContainer>
         <HeroBtnWrapper>
           <Button
             to='contact'

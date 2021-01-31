@@ -22,16 +22,25 @@ const Contact = ({ id }) => {
           </ContBg>
           <ContContent>
             <FormWrap >
-              <FormContent>
                 <Form>
                 <ContH1>Contact Me</ContH1>
                   <FormLabel>Email</FormLabel>
                   <FormInput>
 
                   </FormInput>
+                  <FormLabel>Email</FormLabel>
+                  <FormInput>
+
+                  </FormInput>
+                  <FormLabel>Email</FormLabel>
+                  <FormInput>
+
+                  </FormInput>
+                  <FormLabel>Email</FormLabel>
+                  <FormInput>
+
+                  </FormInput>
                 </Form>
-              </FormContent>
-              
             </FormWrap>
             <ToastContainer />
           </ContContent>

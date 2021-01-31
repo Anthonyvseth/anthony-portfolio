@@ -101,30 +101,56 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeroP = styled.p`
-  margin-top: 24px;
+  margin-top: 10px;
   color: #fff;
-  font-size: 24px;
+  font-size: 100px;
   text-align: center;
   max-width: 600px;
+  padding: 70px;
+  
 
   @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 60px;
+    padding: 0;
+    margin-top: 0;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 18px;
+    font-size: 50px;
+    padding: 0;
+    margin-top: 0;
   }
 
   &:hover {
-        color: #fff59d;
-        transition: 0.2s ease-in-out;
-      }
+    color: #fff59d;
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+  }
 `;
+
+export const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  max-height: 340px;
+  padding: 30px;
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    
+  }
+
+`
+
 export const HeroBtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 `;
 
 export const ArrowForward = styled(MdArrowForward)`

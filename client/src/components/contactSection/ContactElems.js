@@ -57,9 +57,9 @@ export const VideoBg = styled.video`
 
 export const ContContent = styled.div`
   z-index: 3;
-  max-width: 1200px;
+  max-width: 80vw;
   position: absolute;
-  padding: 8px 24px;
+  padding: 8px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,36 +67,10 @@ export const ContContent = styled.div`
 
 export const ContH1 = styled.h1`
   color: #fff;
-  border-right: solid 3px rgba(255 ,255 ,255 ,.75);
   white-space: nowrap;
   overflow: hidden; 
   font-size: 48px;
   text-align: center;
-  animation: animated-text 2s steps(12,end) 1s 1 normal both,
-             animated-cursor 600ms steps(12,end) infinite;
-
-  @keyframes animated-text{
-    from{width: 0;}
-    to{width: 300px;}
-  }
-              
-  @keyframes animated-cursor{
-    from{border-right-color: rgba(255, 255, 255,.75);}
-    to{border-right-color: transparent;}
-  };
-
-  @media screen and (max-width: 768px) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-  }
-
-  &:hover {
-        color: #fff59d;
-        transition: 0.2s ease-in-out;
-      }
 `;
 
 export const ContP = styled.p`
@@ -152,30 +126,22 @@ export const FormWrap = styled.div`
     height: 80%;
   }
 `;
-export const FormContent = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media screen and (max-width: 480px) {
-    padding: 10px;
-  }
-  `
   export const Form = styled.form`
   background: rgba(255, 255, 255, .3);
   max-width: 400px;
   height: auto;
   width: 100%;
   z-index: 1;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   padding: 80px 32px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
   @media screen and (max-width: 400px) {
-    padding: 32px 0;
+    padding: 0;
   }
 `;
 
