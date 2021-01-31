@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {Component} from 'react'
 import {
     VideoBg,
     ContContainer,
@@ -10,22 +10,26 @@ import {
     FormLabel,
     ContH1,
     ContContent,
-    FormButton, FormMessage
+    FormButton, FormMessage, SpanErr
 } from './ContactElems'
 import Video from '../../videos/video1.mp4'
 import emailjs from 'emailjs-com'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
+
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
+// Form validation
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
 
+  // Validate form errors being empty
   Object.values(formErrors).forEach((val) => {
     val.length > 0 && (valid = false);
   });
 
+  // Validate the form was filled out
   Object.values(rest).forEach((val) => {
     val === '' && (valid = false);
   });
@@ -33,40 +37,27 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
-const Contact = ({ id }) => {
-  const [form, setForm] = useState('')
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-
+class Contact extends Component {
   
-
-  const formChange = (e) => {
-    e.preventDefault()
-    const fieldName = e.target.name
-    const fieldValue = e.target.value
-    switch (fieldName) {
-      case 'name':
-        setName(fieldValue)
-        break
-    case 'email':
-        setEmail(fieldValue)
-        break
-    case 'subject':
-        setSubject(fieldValue)
-        break
-    case 'message':
-        setMessage(fieldValue)
-        break
-    default :
-      return null
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      formErrors: {
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      },
+    };
   }
 
-  function toastifySuccess() {
+  toastifySuccess() {
     toast.success('Form sent!', {
-      position: 'bottom-right',
+      position: 'bottom-center',
       autoClose: 5000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -76,7 +67,7 @@ const Contact = ({ id }) => {
     });
   }
 
-  function toastifyFail() {
+  toastifyFail() {
     toast.error('Form failed to send!', {
       position: 'bottom-right',
       autoClose: 5000,
@@ -88,27 +79,22 @@ const Contact = ({ id }) => {
     });
   }
 
-    const handleSubmit = (e) => {
-      e.preventDefault()
+  handleSubmit = (e) => {
+    e.preventDefault();
 
-      const formState = {
+    if (formValid(this.state)) {
+      // Handle form validation success
+      const { name, email, subject, message } = this.state;
+
+      // Set template params
+      let templateParams = {
         name: name,
         email: email,
         subject: subject,
-        message: message
-      }
-      setForm(formState)
+        message: message,
+      };
 
-      if(formValid(form)) {
-
-        let templateParams = {
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-        };  
-
-      emailjs.send('service_5qxccsq', 'YOUR_TEMPLATE_ID', templateParams, 'userID');
+    
 
       console.log(`
         --SUBMITTING--
@@ -117,57 +103,125 @@ const Contact = ({ id }) => {
         Subject: ${subject}
         Message: ${message}
       `);
-
+      
+      this.toastifySuccess();
+      this.resetForm();
     } else {
+      // Handle form validation failure
       console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
+      this.toastifyFail();
     }
+  };
+
+  // Function to reset form
+  resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
   }
 
+  handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
+
+    switch (name) {
+      case 'name':
+        formErrors.name = value.length < 1 ? 'Please enter your name.' : '';
+        break;
+      case 'email':
+        formErrors.email = emailRegex.test(value) ? '' : 'Please enter a valid email address.';
+        break;
+      case 'subject':
+        formErrors.subject = value.length < 1 ? 'Please enter a subject.' : '';
+        break;
+      case 'message':
+        formErrors.message = value.length < 1 ? 'Please enter a message' : '';
+        break;
+      default:
+        break;
+    }
+    this.setState({ formErrors, [name]: value });
+  };
+
+  render() {
+    const { formErrors } = this.state;
 
     return (
-        <ContContainer id={id}>
+        <ContContainer id={this.props.id} >
           <ContBg>
               <VideoBg playsInline autoPlay loop muted src={Video} type='video1/mp4' />
           </ContBg>
           <ContContent>
             <FormWrap >
-                <Form>
+                <Form id='contact-form' onSubmit={this.handleSubmit} noValidate >
                 <ContH1>Contact Me</ContH1>
                   <FormLabel>Name</FormLabel>
                   <FormInput
                     type='text'
                     name='name'
+                    value={this.state.name}
+                    className={`form-control formInput ${formErrors.name.length > 0 ? 'error' : null}`}
+                    onChange={this.handleChange}
                     placeholder='Name'
-                    onChange={formChange}
+                    noValidate
                   ></FormInput>
+                    {formErrors.name.length > 0 && (
+                    <SpanErr className='errorMessage'>{formErrors.name}</SpanErr>
+                    )}
                   <FormLabel>Email</FormLabel>
                   <FormInput
-                    type='text'
+                    type='email'
                     name='email'
+                    value={this.state.email}
+                    className={`form-control formInput ${formErrors.email.length > 0 ? 'error' : null}`}
+                    onChange={this.handleChange}
                     placeholder='Email'
-                    onChange={formChange}
+                    noValidate
                   ></FormInput>
+                    {formErrors.email.length > 0 && (
+                    <SpanErr className='errorMessage'>{formErrors.email}</SpanErr>
+                    )}
                   <FormLabel>Subject</FormLabel>
                   <FormInput
-                    type='text'
+                    type='subject'
                     name='subject'
-                    placeholder='subject'
-                    onChange={formChange}
+                    value={this.state.subject}
+                    className={`form-control formInput ${
+                      formErrors.subject.length > 0 ? 'error' : null
+                    }`}
+                    onChange={this.handleChange}
+                    placeholder='Subject'
+                    noValidate
                   ></FormInput>
+                    {formErrors.subject.length > 0 && (
+                    <SpanErr className='errorMessage'>{formErrors.subject}</SpanErr>
+                    )}
                   <FormLabel>Message</FormLabel>
                   <FormMessage
-                    type='text'
                     name='message'
-                    placeholder='message'
-                    onChange={formChange}
+                    value={this.state.message}
+                    className={`form-control formInput ${
+                      formErrors.message.length > 0 ? 'error' : null
+                    }`}
+                    onChange={this.handleChange}
+                    placeholder='Message'
+                    noValidate
                   ></FormMessage>
-                <FormButton>Send Message</FormButton>
+                    {formErrors.message.length > 0 && (
+                    <SpanErr className='errorMessage'>{formErrors.message}</SpanErr>
+                    )}
+                <FormButton onSubmit={this.handleSubmit} >Send Message</FormButton>
                 </Form>
             </FormWrap>
             <ToastContainer />
           </ContContent>
       </ContContainer>
     )
+  }
 }
 
 export default Contact

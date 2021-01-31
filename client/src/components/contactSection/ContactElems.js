@@ -154,7 +154,7 @@ export const FormInput = styled.input`
   border-radius: 4px;
 `;
 
-export const FormMessage = styled.input`
+export const FormMessage = styled.textarea`
   height: 200px;
   padding: 16px 16px;
   margin-bottom: 32px;
@@ -177,3 +177,7 @@ export const FormButton = styled.button`
     transition: 0.2s ease-in-out;
     }
 `;
+
+export const SpanErr= styled.span`
+  color: red;
+`
