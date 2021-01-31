@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-  height: 100vh;
+  height: 900px;
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 91%, 0 100%, 0 49%, 0 0);
