@@ -10,6 +10,7 @@ import {
     ImgWrap,
     Img 
 } from './AboutElems'
+import profile from '../../assets/profile-pic.jpg'
 
 const About = ({
     id,
@@ -20,7 +21,7 @@ const About = ({
 }) => {
     return (
         <AboutContainer id={id}>
-            <AboutWrapper>
+
                 <Column1>
                     <TextWrapper>
                     <Heading >{headline} </Heading>
@@ -29,10 +30,10 @@ const About = ({
                 </Column1>
                 <Column2>
                     <ImgWrap>
-                        <Img src={img} alt={alt} />
+                        <Img src={profile} alt={alt} />
                     </ImgWrap>
                 </Column2>
-            </AboutWrapper>
+
         </AboutContainer>
     )
 }
