@@ -94,7 +94,7 @@ class Contact extends Component {
         message: message,
       };
 
-    
+      // emailjs.send(SAVED IN SLACK );
 
       console.log(`
         --SUBMITTING--
