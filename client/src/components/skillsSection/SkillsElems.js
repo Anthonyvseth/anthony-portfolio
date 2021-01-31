@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 
 export const SkillContainer = styled.div`
+  margin-top: 20px;
+  height: 100vh;
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 49%, 0 8%);

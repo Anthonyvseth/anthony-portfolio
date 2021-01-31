@@ -127,7 +127,7 @@ export const FormWrap = styled.div`
   }
 `;
   export const Form = styled.form`
-  background: rgba(255, 255, 255, .3);
+  background: #010101;
   max-width: 400px;
   height: auto;
   width: 100%;

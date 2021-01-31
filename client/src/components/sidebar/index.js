@@ -5,9 +5,7 @@ import {
   CloseIcon,
   SidebarWrapper,
   SidebarMenu,
-  SidebarLink,
-  SidebarRoute,
-  SideBtnWrap
+  SidebarLink
 } from './SideBarElems';
 import { FaBars, FaRegUser, FaChalkboard, FaAddressBook, FaCode } from 'react-icons/fa';
 
