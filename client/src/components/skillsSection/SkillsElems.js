@@ -5,26 +5,27 @@ export const SkillContainer = styled.div`
   height: 900px;
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
-  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
-    display: flex;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+  display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  
-  @media screen and (max-width: 768px) {
-    height: 100vh;
-    padding: 100px 0;
+
+  @media screen and (max-width: 700px) {
+    padding: 0;
+    height: 1100px;
   }
 
-  @media screen and (max-width: 480px) {
-    height: 100vh;
+  @media screen and (max-width: 400px) {
+    padding: 0;
+    height: 1100px;
   }
+  
 `;
 
 export const SkillH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 10px;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -33,12 +34,12 @@ export const SkillH1 = styled.h1`
 
 export const SkillWrapper = styled.div`
 max-width: 1000px;
-margin: 0 auto;
+margin: 0;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 align-items: center;
 grid-gap: 100px;
-padding: 0 50px;
+padding: 0;
 
 @media screen and (max-width: 700px) {
   grid-template-columns: 1fr 1fr;
@@ -53,8 +54,8 @@ export const SkillCard = styled.div`
   justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
-  max-height: 10px;
-  max-width: 40%;
+  max-height: 50px;
+  max-width: 200px;
   padding: 5px;
   margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);

@@ -9,6 +9,7 @@ export const PortContainer = styled.div`
   color: '#030029';
   background: #616161;
   overflow:hidden;
+  margin-bottom: 20px;
 
   @media screen and (max-width: 768px) {
     height: 900px;

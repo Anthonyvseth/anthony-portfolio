@@ -7,15 +7,12 @@ export const AboutContainer = styled.div`
   clip-path: polygon(100% 0, 100% 50%, 100% 91%, 0 100%, 0 49%, 0 0);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  
-  @media screen and (max-width: 768px) {
-    padding: 10px 0;
-  }
 
   @media screen and (max-width: 400px) {
     padding: 0;
+    height: 900px;
   }
 `;
 
