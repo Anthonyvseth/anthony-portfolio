@@ -27,7 +27,7 @@ export const PortWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  grid-gap: 16px;
+  grid-gap: 30px;
   padding: 0 50px;
   overflow: scroll;
 
