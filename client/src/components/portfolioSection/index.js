@@ -11,6 +11,7 @@ import {
  } from './PortfolioElems'
  import project1 from '../../assets/project1.gif'
  import project2 from '../../assets/project2.gif'
+ import project3 from '../../assets/project3.gif'
 
 const Portfolio = ({ id }) => {
 
@@ -28,10 +29,39 @@ const Portfolio = ({ id }) => {
         window.open('https://make-your-day-2.herokuapp.com/')
       }
 
+    function gitCakeBlog() {
+        window.open('https://github.com/Anthonyvseth/cake_baker_blog')
+      }
+    function cakeBlog() {
+        window.open('https://cake-baker-blog.herokuapp.com/')
+      }
+
     return (
         <PortContainer id={id}>
             <PortH1>Portfolio</PortH1>
             <PortWrapper>
+            <PortCard>
+                <ImgWrap>
+                    <Img src={project3}/>
+                </ImgWrap>
+                <PortH2>Make Your Day</PortH2>
+                <PortP>Created for my partner that runs a small buisness. A protoype website for her to display and give details about each new cake that she creates. MERN fullstack app with full crud.</PortP>
+                <LinkWrap>
+                    <PortLink onClick={gitCakeBlog}>GitHub</PortLink>
+                    <PortLink onClick={cakeBlog}>Website</PortLink>
+                </LinkWrap>
+            </PortCard>
+            <PortCard>
+                <ImgWrap>
+                    <Img src={project2}/>
+                </ImgWrap>
+                <PortH2>Make Your Day</PortH2>
+                <PortP>Colaborative project based on google extension called 'Momentun'. My main job within the project was frontend work with react. PERN fullstack app.</PortP>
+                <LinkWrap>
+                    <PortLink onClick={gitMakeYourDay}>GitHub</PortLink>
+                    <PortLink onClick={makeYourDay}>Website</PortLink>
+                </LinkWrap>
+            </PortCard>
             <PortCard>
                 <ImgWrap>
                     <Img src={project1}/>
@@ -41,17 +71,6 @@ const Portfolio = ({ id }) => {
                 <LinkWrap>
                     <PortLink onClick={gitStudioGhibli}>GitHub</PortLink>
                     <PortLink onClick={StudioGhibli}>Website</PortLink>
-                </LinkWrap>
-            </PortCard>
-            <PortCard>
-                <ImgWrap>
-                    <Img src={project2}/>
-                </ImgWrap>
-                <PortH2>Make Your Day</PortH2>
-                <PortP>Colaborative project based on google extension called 'Momentun'. My main job within the project was frontend work with react.</PortP>
-                <LinkWrap>
-                    <PortLink onClick={gitMakeYourDay}>GitHub</PortLink>
-                    <PortLink onClick={makeYourDay}>Website</PortLink>
                 </LinkWrap>
             </PortCard>
             </PortWrapper>
