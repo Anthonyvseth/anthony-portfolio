@@ -13,6 +13,7 @@ import {
  import project2 from '../../assets/project2.gif'
  import project3 from '../../assets/project3.gif'
  import project4 from '../../assets/project4.gif'
+ import project5 from '../../assets/project5.gif'
 
 const Portfolio = ({ id }) => {
 
@@ -44,10 +45,25 @@ const Portfolio = ({ id }) => {
         window.open('https://life-lesson-share-app.web.app/')
       }
 
+      function gitPgt() {
+        window.open('https://github.com/Anthonyvseth/personal-growth-tracker')
+      }
+
+
     return (
         <PortContainer id={id}>
             <PortH1>Portfolio</PortH1>
             <PortWrapper>
+            <PortCard>
+                <ImgWrap>
+                    <Img src={project5}/>
+                </ImgWrap>
+                <PortH2>Life Lessons</PortH2>
+                <PortP>Still a Work in Progress, but here is a person PERN fullstack site for a user to create person goals and accomplishments.</PortP>
+                <LinkWrap>
+                    <PortLink onClick={gitPgt}>GitHub</PortLink>
+                </LinkWrap>
+            </PortCard>
             <PortCard>
                 <ImgWrap>
                     <Img src={project4}/>
