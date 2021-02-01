@@ -2,15 +2,13 @@ import styled from 'styled-components';
 
 
 export const SkillContainer = styled.div`
-  margin-top: 20px;
   height: 900px;
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
-  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 49%, 0 8%);
-  display: flex;
-  height: 100vh;
+  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   
   @media screen and (max-width: 768px) {
@@ -23,25 +21,71 @@ export const SkillContainer = styled.div`
   }
 `;
 
-export const SkillWrapper = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  grid-gap: 16px;
-  padding: 0 50px;
-  @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    padding: 0;
+export const SkillH1 = styled.h1`
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 
-export const SkillH1 = styled.h1`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col1;
+export const SkillWrapper = styled.div`
+max-width: 1000px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+align-items: center;
+grid-gap: 100px;
+padding: 0 10px;
+
+@media screen and (max-width: 700px) {
+  grid-template-columns: 1fr 1fr;
+}
+
+`;
+
+export const SkillCard = styled.div`
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  max-height: 10px;
+  max-width: 40%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  z-index: 0;
+
+  @media screen and (max-width: 700px) {
+    max-width: 360px;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 300px;
+  }
+  
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+`;
+
+export const SkillH2 = styled.h1`
+font-size: 4rem;
+color: #fff;
+margin-bottom: 1px;
+
+@media screen and (max-width: 1000px) {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 700px) {
+  font-size: 3rem;
+}
 `;
