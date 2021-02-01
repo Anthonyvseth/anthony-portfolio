@@ -31,7 +31,6 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-    color: #87e1f5;
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -40,6 +39,8 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+    color: #fff59d;
+    text-shadow: 0 0 10px #fff59d;
 `;
 
 export const MobileIcon = styled.div`
@@ -98,6 +99,7 @@ export const NavLinks = styled(LinkS)`
     &:hover {
         color: #fff59d;
         transition: 0.2s ease-in-out;
+        text-shadow: 0 0 10px #fff59d;
       }
     &.active {
         border-bottom: 3px solid #fff59d;
