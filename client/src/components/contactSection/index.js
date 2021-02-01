@@ -5,12 +5,13 @@ import {
     FormWrap,
     Form,
     ContBg,
-    FormContent,
     FormInput,
     FormLabel,
     ContH1,
     ContContent,
-    FormButton, FormMessage, SpanErr
+    FormButton, FormMessage, SpanErr,
+    ContWrap,
+    ContCard
 } from './ContactElems'
 import Video from '../../videos/video1.mp4'
 import emailjs from 'emailjs-com'
@@ -94,7 +95,7 @@ class Contact extends Component {
         message: message,
       };
 
-      // emailjs.send(SAVED IN SLACK );
+      emailjs.send('service_5qxccsq', 'template_4vgrtcw', templateParams, 'user_4Ph33gSIKYpvP9RsVszZb');
 
       console.log(`
         --SUBMITTING--
@@ -156,10 +157,13 @@ class Contact extends Component {
               <VideoBg playsInline autoPlay loop muted src={Video} type='video1/mp4' />
           </ContBg>
           <ContContent>
-            <FormWrap >
-                <Form id='contact-form' onSubmit={this.handleSubmit} noValidate >
-                <ContH1>Contact Me</ContH1>
-                  <FormLabel>Name</FormLabel>
+          <FormWrap >
+          <Form id='contact-form' onSubmit={this.handleSubmit} noValidate >
+          <ContH1>Contact Me</ContH1>
+          <ContWrap>
+            <ContCard>Anthonyvseth@gmail.com</ContCard>
+          </ContWrap>
+          <FormLabel>Name</FormLabel>
                   <FormInput
                     type='text'
                     name='name'

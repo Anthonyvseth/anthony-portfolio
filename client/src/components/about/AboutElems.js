@@ -3,7 +3,7 @@ import { MdCloudDownload, MdFileDownload } from 'react-icons/md';
 
 
 export const AboutContainer = styled.div`
-  height: 1150px;
+  height: 1200px;
   color: #fff;
   background: ${({ scrollNav }) => (scrollNav ? 'transparent' : '#030029')};
   clip-path: polygon(100% 0, 100% 50%, 100% 91%, 0 100%, 0 49%, 0 0);
@@ -47,8 +47,6 @@ export const TextWrapper = styled.div`
 
 
 export const Heading = styled.h1`
-
-  margin-bottom: 50px;
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
@@ -57,6 +55,12 @@ export const Heading = styled.h1`
     font-size: 32px;
   }
 `;
+
+export const AboutH2 = styled.h2`
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 50px;
+`
 
 export const Subtitle = styled.p`
   max-width: 700px;

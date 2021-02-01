@@ -6,7 +6,7 @@ export const ContContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 900px;
+  height: 1000px;
   position: relative;
   z-index: 1;
 
@@ -129,7 +129,7 @@ export const FormWrap = styled.div`
   export const Form = styled.form`
   background: rgba(255,255,255, .25);
   max-width: 800px;
-  height: 80vh;
+  height: 800px;
   width: 80vw;
   z-index: 1;
   display: flex;
@@ -183,3 +183,19 @@ export const SpanErr= styled.span`
   font-weight: bold;
   text-shadow: 0 0 10px #FF0000;
 `
+
+export const ContWrap = styled.div`
+color: #fff;
+font-size: 20px;
+
+`;
+
+export const ContCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 0;
+  color: #fff59d;
+  font-size: 20px;
+
+`;

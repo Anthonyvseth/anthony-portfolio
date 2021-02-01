@@ -11,10 +11,11 @@ import {
     HeroBtnWrapper,
     ArrowForward,
     ArrowRight,
-    Button
+    Button,
+    AboutH2
 } from './AboutElems'
 import profile from '../../assets/profile-pic.jpg'
-import AvsResume from '../../assets/AvsResume.pdf'
+import Resume from '../../assets/AnthonySethResume.pdf'
 
 const About = ({
     id,
@@ -30,7 +31,7 @@ const About = ({
         };
     
         function onResumeClick() {
-            window.open(AvsResume);
+            window.open(Resume);
           }
     
     return (
@@ -39,6 +40,7 @@ const About = ({
                 <Column1>
                     <TextWrapper>
                     <Heading >{headline} </Heading>
+                    <AboutH2>Denver, CO</AboutH2>
                     <Subtitle> {description} </Subtitle>
                     <HeroBtnWrapper>
                     <Button
