@@ -129,7 +129,7 @@ export const FormWrap = styled.div`
   export const Form = styled.form`
   background: rgba(255,255,255, .25);
   max-width: 800px;
-  height: 90vh;
+  height: 80vh;
   width: 80vw;
   z-index: 1;
   display: flex;

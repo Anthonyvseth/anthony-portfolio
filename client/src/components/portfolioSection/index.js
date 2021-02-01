@@ -58,8 +58,8 @@ const Portfolio = ({ id }) => {
                 <ImgWrap>
                     <Img src={project5}/>
                 </ImgWrap>
-                <PortH2>Life Lessons</PortH2>
-                <PortP>Still a Work in Progress, but here is a person PERN fullstack site for a user to create person goals and accomplishments.</PortP>
+                <PortH2>Personal Growth Tracker</PortH2>
+                <PortP>A work in progress, PERN fullstack site for a user to log and track personal goals and accomplishments, with a section to write affirmations to speak aloud.</PortP>
                 <LinkWrap>
                     <PortLink onClick={gitPgt}>GitHub</PortLink>
                 </LinkWrap>
