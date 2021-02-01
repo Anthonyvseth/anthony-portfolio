@@ -11,9 +11,11 @@ import {
     HeroBtnWrapper,
     ArrowForward,
     ArrowRight,
-    Button
+    Button,
+    AboutH2
 } from './AboutElems'
 import profile from '../../assets/profile-pic.jpg'
+import Resume from '../../assets/AnthonySethResume.pdf'
 
 const About = ({
     id,
@@ -27,20 +29,24 @@ const About = ({
         const onHover = () => {
           setHover(!hover);
         };
-
-
+    
+        function onResumeClick() {
+            window.open(Resume);
+          }
+    
     return (
         <AboutContainer id={id}>
 
                 <Column1>
                     <TextWrapper>
                     <Heading >{headline} </Heading>
+                    <AboutH2>Denver, CO</AboutH2>
                     <Subtitle> {description} </Subtitle>
                     <HeroBtnWrapper>
                     <Button
                         onMouseEnter={onHover}
                         onMouseLeave={onHover}
-                        href={profile}
+                        onClick={onResumeClick}
                     >
                       Download Resume {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>

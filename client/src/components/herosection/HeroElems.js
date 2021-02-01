@@ -67,7 +67,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-  color: #fff;
+  color: #fff59d;
   border-right: solid 3px rgba(255 ,255 ,255 ,.75);
   white-space: nowrap;
   overflow: hidden; 
@@ -95,12 +95,8 @@ export const HeroH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
-
-  &:hover {
-        color: #fff59d;
-        transition: 0.2s ease-in-out;
-      }
 `;
+
 
 export const HeroP = styled.p`
   margin-top: 10px;
@@ -109,7 +105,6 @@ export const HeroP = styled.p`
   text-align: center;
   max-width: 600px;
   padding: 70px;
-  
 
   @media screen and (max-width: 768px) {
     font-size: 60px;

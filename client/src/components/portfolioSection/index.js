@@ -59,9 +59,9 @@ const Portfolio = ({ id }) => {
                     <Img src={project5}/>
                 </ImgWrap>
                 <PortH2>Personal Growth Tracker</PortH2>
-                <PortP>A work in progress, PERN fullstack site for a user to log and track personal goals and accomplishments, with a section to write affirmations to speak aloud.</PortP>
+                <PortP>A work in progress, PERN fullstack site for a user to log and track personal goals and accomplishments. Also includes a section for users to write personal affirmations.</PortP>
                 <LinkWrap>
-                    <PortLink onClick={gitPgt}>GitHub</PortLink>
+                    <PortLink onClick={gitPgt}>Code</PortLink>
                 </LinkWrap>
             </PortCard>
             <PortCard>
@@ -69,10 +69,10 @@ const Portfolio = ({ id }) => {
                     <Img src={project4}/>
                 </ImgWrap>
                 <PortH2>Life Lessons</PortH2>
-                <PortP>A website for people to share any life lesson they have. Once signed in you can view all of the life lessons that every user has created. A react, redux, firebase application.</PortP>
+                <PortP>A Site for individuals to share any life lesson they've learned. Once signed in you can view all the posts created by every user. A react, redux, firebase application.</PortP>
                 <LinkWrap>
-                    <PortLink onClick={gitLifeLesson}>GitHub</PortLink>
-                    <PortLink onClick={lifeLesson}>Website</PortLink>
+                    <PortLink onClick={gitLifeLesson}>Code</PortLink>
+                    <PortLink onClick={lifeLesson}>Site</PortLink>
                 </LinkWrap>
             </PortCard>
             <PortCard>
@@ -80,10 +80,10 @@ const Portfolio = ({ id }) => {
                     <Img src={project3}/>
                 </ImgWrap>
                 <PortH2>Cake Baker Blog</PortH2>
-                <PortP>Created for my partner that runs a small buisness. A protoype website for her to display and give details about each new cake that she creates. MERN fullstack app with full crud.</PortP>
+                <PortP>Created for my partner who runs a small buisness. A prototype site for her to share each one of her cake creations along with a description where users are able to interact on each post by commenting. MERN fullstack app with full crud.</PortP>
                 <LinkWrap>
-                    <PortLink onClick={gitCakeBlog}>GitHub</PortLink>
-                    <PortLink onClick={cakeBlog}>Website</PortLink>
+                    <PortLink onClick={gitCakeBlog}>Code</PortLink>
+                    <PortLink onClick={cakeBlog}>Site</PortLink>
                 </LinkWrap>
             </PortCard>
             <PortCard>
@@ -91,10 +91,10 @@ const Portfolio = ({ id }) => {
                     <Img src={project2}/>
                 </ImgWrap>
                 <PortH2>Make Your Day</PortH2>
-                <PortP>Colaborative project based on google extension called 'Momentun'. My main job within the project was frontend work with react. PERN fullstack app.</PortP>
+                <PortP>Collaborative project based on google extension called 'Momentun'. My main objective within the project was frontend work with react. PERN fullstack app.</PortP>
                 <LinkWrap>
-                    <PortLink onClick={gitMakeYourDay}>GitHub</PortLink>
-                    <PortLink onClick={makeYourDay}>Website</PortLink>
+                    <PortLink onClick={gitMakeYourDay}>Code</PortLink>
+                    <PortLink onClick={makeYourDay}>Site</PortLink>
                 </LinkWrap>
             </PortCard>
             <PortCard>
@@ -102,10 +102,10 @@ const Portfolio = ({ id }) => {
                     <Img src={project1}/>
                 </ImgWrap>
                 <PortH2>Studio Ghibli Movies</PortH2>
-                <PortP>The very first deployed project I have ever created. It is very important to me because it shows this because it shows how much growth I have gained since I began my software engineering journey.</PortP>
+                <PortP>My very first deployed project I've created. This project holds value to me because it shows how much growth I've gained since I began my software engineering journey.</PortP>
                 <LinkWrap>
-                    <PortLink onClick={gitStudioGhibli}>GitHub</PortLink>
-                    <PortLink onClick={StudioGhibli}>Website</PortLink>
+                    <PortLink onClick={gitStudioGhibli}>Code</PortLink>
+                    <PortLink onClick={StudioGhibli}>Site</PortLink>
                 </LinkWrap>
             </PortCard>
             </PortWrapper>
