@@ -14,6 +14,7 @@ import {
     Button
 } from './AboutElems'
 import profile from '../../assets/profile-pic.jpg'
+import AvsResume from '../../assets/AvsResume.pdf'
 
 const About = ({
     id,
@@ -27,8 +28,11 @@ const About = ({
         const onHover = () => {
           setHover(!hover);
         };
-
-
+    
+        function onResumeClick() {
+            window.open(AvsResume);
+          }
+    
     return (
         <AboutContainer id={id}>
 
@@ -40,7 +44,7 @@ const About = ({
                     <Button
                         onMouseEnter={onHover}
                         onMouseLeave={onHover}
-                        href={profile}
+                        onClick={onResumeClick}
                     >
                       Download Resume {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
