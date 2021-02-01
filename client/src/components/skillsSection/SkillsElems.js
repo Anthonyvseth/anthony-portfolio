@@ -70,7 +70,7 @@ export const SkillCard = styled.div`
   }
   
   &:hover {
-    transform: scale(1.2);
+    transform: scale(.9);
     transition: all 0.4s ease-in-out;
     cursor: pointer;
   }
@@ -91,15 +91,15 @@ margin-bottom: 1px;
 `;
 
 export const SkillH3 = styled.h1`
-font-size: 1.3rem;
+font-size: 1rem;
 color: #fff;
 margin-bottom: 1px;
 
 @media screen and (max-width: 1000px) {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 @media screen and (max-width: 700px) {
-  font-size: .8rem;
+  font-size: .6rem;
 }
 `;

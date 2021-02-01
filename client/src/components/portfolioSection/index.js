@@ -26,46 +26,12 @@ const Portfolio = ({ id }) => {
                     <Img src={project1}/>
                 </ImgWrap>
                 <PortH2>Studio Ghibli Movies</PortH2>
-                <PortP>This project is my very first Project that I deployed. I like to show this because I have come along way from this creation and I can look back at how much I have progressed.</PortP>
+                <PortP>The very first deployed project I have ever created. It is very important to me because it shows this because it shows how much growth I have gained since I began my software engineering journey.</PortP>
                 <LinkWrap>
                     <PortLink onClick={gitStudioGhibli}>GitHub</PortLink>
                     <PortLink onClick={gitStudioGhibli}>Website</PortLink>
                 </LinkWrap>
             </PortCard>
-            <PortCard>
-                <ImgWrap>
-                    <Img src={project1}/>
-                </ImgWrap>
-                <PortH2>Studio Ghibli Movies</PortH2>
-                <PortP>This project is my very first Project that I deployed. I like to show this because I have come along way from this creation and I can look back at how much I have progressed.</PortP>
-                <LinkWrap>
-                    <PortLink onClick={gitStudioGhibli}>GitHub</PortLink>
-                    <PortLink onClick={gitStudioGhibli}>Website</PortLink>
-                </LinkWrap>
-            </PortCard>
-            <PortCard>
-                <ImgWrap>
-                    <Img src={project1}/>
-                </ImgWrap>
-                <PortH2>Studio Ghibli Movies</PortH2>
-                <PortP>This project is my very first Project that I deployed. I like to show this because I have come along way from this creation and I can look back at how much I have progressed.</PortP>
-                <LinkWrap>
-                    <PortLink onClick={gitStudioGhibli}>GitHub</PortLink>
-                    <PortLink onClick={gitStudioGhibli}>Website</PortLink>
-                </LinkWrap>
-            </PortCard>
-            <PortCard>
-                <ImgWrap>
-                    <Img src={project1}/>
-                </ImgWrap>
-                <PortH2>Studio Ghibli Movies</PortH2>
-                <PortP>This project is my very first Project that I deployed. I like to show this because I have come along way from this creation and I can look back at how much I have progressed.</PortP>
-                <LinkWrap>
-                    <PortLink onClick={gitStudioGhibli}>GitHub</PortLink>
-                    <PortLink onClick={gitStudioGhibli}>Website</PortLink>
-                </LinkWrap>
-            </PortCard>
-            
             </PortWrapper>
         </PortContainer>
     )
