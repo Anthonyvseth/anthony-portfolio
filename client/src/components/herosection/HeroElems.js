@@ -115,12 +115,14 @@ export const HeroP = styled.p`
     font-size: 60px;
     padding: 0;
     margin-top: 0;
+    transition: all 0.4s ease-in-out;
   }
 
   @media screen and (max-width: 480px) {
     font-size: 50px;
     padding: 0;
     margin-top: 0;
+    transition: all 0.4s ease-in-out;
   }
 
   &:hover {
@@ -148,6 +150,7 @@ export const LinkContainer = styled.div`
 `
 
 export const HeroBtnWrapper = styled.div`
+  color: #fff59d
   margin-top: 32px;
   display: flex;
   flex-direction: column;

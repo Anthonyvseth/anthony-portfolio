@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { 
     AboutContainer, 
-    AboutWrapper,
     Column1,
     TextWrapper,
     Heading,
     Subtitle,
     Column2,
     ImgWrap,
-    Img 
+    Img,
+    HeroBtnWrapper,
+    ArrowForward,
+    ArrowRight,
+    Button
 } from './AboutElems'
 import profile from '../../assets/profile-pic.jpg'
 
@@ -19,6 +22,13 @@ const About = ({
     img,
     alt
 }) => {
+        const [hover, setHover] = useState(false);
+      
+        const onHover = () => {
+          setHover(!hover);
+        };
+
+
     return (
         <AboutContainer id={id}>
 
@@ -26,6 +36,15 @@ const About = ({
                     <TextWrapper>
                     <Heading >{headline} </Heading>
                     <Subtitle> {description} </Subtitle>
+                    <HeroBtnWrapper>
+                    <Button
+                        onMouseEnter={onHover}
+                        onMouseLeave={onHover}
+                        href={profile}
+                    >
+                      Download Resume {hover ? <ArrowForward /> : <ArrowRight />}
+                    </Button>
+                  </HeroBtnWrapper>
                     </TextWrapper>
                 </Column1>
                 <Column2>
