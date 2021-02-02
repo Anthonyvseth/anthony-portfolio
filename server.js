@@ -5,10 +5,9 @@ const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
-app.get('*', function (req, res) {
-  const index = path.join(__dirname, 'build', './public/index.html');
-  res.sendFile(index);
-});
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+)
 
 app.listen(port, () => {
    console.log('Server is up!');
