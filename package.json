@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && rm -rf build && npm install && npm run build"
+    "start": "npm run build-client && node server",
+    "start-local": "npm run build-client && PORT=8080 node server",
+    "build-client": "cd client && npm run build && cd .."
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Anthonyvseth/anthony-portfolio/issues"
   },
-  "homepage": "https://github.com/Anthonyvseth/anthony-portfolio#readme"
+  "homepage": "https://github.com/Anthonyvseth/anthony-portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
