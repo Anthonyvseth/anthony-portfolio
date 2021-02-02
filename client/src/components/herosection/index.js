@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
 import { Button } from '../ButtonElems';
 import {FaGithub, FaLinkedin, FaInstagram} from 'react-icons/fa'
 import Video from '../../videos/video1.mp4';
