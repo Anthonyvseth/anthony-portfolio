@@ -1,9 +1,14 @@
 const express = require('express');
-
+const bodyParser = require("body-parser");
 const path = require('path');
 const port = process.env.PORT || 8080;
 const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+ if (process.env.NODE_ENV === "production"){
+    app.use(express.static(path.join(__dirname, 'client', 'build')))
+ }
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/ping', function (req, res) {
